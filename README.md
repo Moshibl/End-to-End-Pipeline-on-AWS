@@ -301,7 +301,8 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 - Install ArgoCD image updater with values
 
 ```bash
-helm install -n argocd argocd-image-updater argo/argocd-image-updater --version 0.12.2 -f Helm/argo_imageupdater_values.yaml
+helm install -n argocd argocd-image-updater argo/argocd-image-updater --version 0.12.2 \
+-f Helm/argo_imageupdater_values.yaml
 ```
 
 - Add image updater annotations
